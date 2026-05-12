@@ -2,6 +2,7 @@ import json
 
 
 def filter_users_by_name(name):
+    """ filters users by name """
     with open("users.json", "r") as file:
         users = json.load(file)
 
@@ -13,6 +14,7 @@ def filter_users_by_name(name):
 
 
 def filter_by_age(age):
+    """ filters users by age """
     with open("users.json", "r") as file:
         users = json.load(file)
 
@@ -23,6 +25,7 @@ def filter_by_age(age):
 
 
 def filter_by_email(email):
+    """ filters users by email """
     with open("users.json", "r") as file:
         users = json.load(file)
 
@@ -33,6 +36,7 @@ def filter_by_email(email):
 
 
 def get_age():
+    """ asks a user to input age and verifies it """
     while True:
         try:
             return int(input("Enter an age to filter users: "))
@@ -41,6 +45,7 @@ def get_age():
 
 
 def get_email():
+    """ asks a user to input email and verifies it """
     while True:
         email = input("Enter an email to filter users: ")
         if '@' in email:
